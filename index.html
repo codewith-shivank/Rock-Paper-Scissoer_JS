@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 ROCK PAPER SCISSORS BATTLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>ROCK PAPER SCISSORS</h1>
+            <div class="round-info">Round: <span id="current-round">1</span>/5</div>
+        </div>
+
+        <div class="battle-area">
+            <div class="player-side">
+                <div class="player-avatar">
+                    <img src="https://api.dicebear.com/6.x/pixel-art/svg?seed=player" alt="player">
+                </div>
+                <div class="score" id="user-score">0</div>
+                <div class="player-name">YOU</div>
+            </div>
+
+            <div class="choices">
+                <div class="choice" id="rock" data-choice="rock">
+                    <div class="choice-inner">
+                        <img src="https://github.com/shradha-khapra/JavaScriptSeries/blob/main/StonePaperScissors/images/rock.png?raw=true" alt="rock">
+                    </div>
+                </div>
+                <div class="choice" id="paper" data-choice="paper">
+                    <div class="choice-inner">
+                        <img src="https://github.com/shradha-khapra/JavaScriptSeries/blob/main/StonePaperScissors/images/paper.png?raw=true" alt="paper">
+                    </div>
+                </div>
+                <div class="choice" id="scissors" data-choice="scissors">
+                    <div class="choice-inner">
+                        <img src="https://github.com/shradha-khapra/JavaScriptSeries/blob/main/StonePaperScissors/images/scissors.png?raw=true" alt="scissors">
+                    </div>
+                </div>
+            </div>
+
+            <div class="computer-side">
+                <div class="computer-avatar">
+                    <img src="https://api.dicebear.com/6.x/pixel-art/svg?seed=computer" alt="computer">
+                </div>
+                <div class="score" id="comp-score">0</div>
+                <div class="player-name">CPU</div>
+            </div>
+        </div>
+
+        <div class="msg-container">
+            <p id="msg">CHOOSE YOUR WEAPON!</p>
+        </div>
+
+        <div class="game-controls">
+            <button id="reset-btn" class="neon-button">Reset Game</button>
+            <div class="sound-control">
+                <button id="toggle-sound" class="neon-button">🔊</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Particle container for effects -->
+    <div id="particles"></div>
+
+    <!-- Audio elements -->
+    <audio id="clickSound" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3" preload="auto"></audio>
+    <audio id="winSound" src="https://assets.mixkit.co/active_storage/sfx/1435/1435-preview.mp3" preload="auto"></audio>
+    <audio id="loseSound" src="https://assets.mixkit.co/active_storage/sfx/2572/2572-preview.mp3" preload="auto"></audio>
+    <audio id="drawSound" src="https://assets.mixkit.co/active_storage/sfx/2573/2573-preview.mp3" preload="auto"></audio>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="apps.js"></script>
+</body>
+</html>
